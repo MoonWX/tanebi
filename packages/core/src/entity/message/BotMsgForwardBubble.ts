@@ -29,6 +29,8 @@ export class BotMsgForwardBubble implements BotMsgType {
                         type: 'image',
                         content: await BotMsgImage.createForward(element, parentMsgType, bot)
                     };
+                } else if (element.type === 'reply') {
+                    return element;
                 }
             })
         )).filter((e) => e !== undefined));
@@ -46,6 +48,8 @@ export class BotMsgForwardBubble implements BotMsgType {
                 return '@全体成员';
             } else if (segment.type === 'image') {
                 return '[图片]';
+            } else if (segment.type === 'reply') {
+                return '少羽牛逼';
             }
         }).join('');
     }
