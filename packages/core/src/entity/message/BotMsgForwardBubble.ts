@@ -60,5 +60,5 @@ export type ForwardedBubbleSegment =
     | { type: 'face'; faceId: number; summary: string; isInLargeCategory: boolean }
     | { type: 'mention'; uin: number; name: string }
     | { type: 'mentionAll' }
-    | { type: 'image'; content: BotMsgImage };
+    | { type: 'image'; content: BotMsgImage }
     | { type: 'reply'; content: string };
