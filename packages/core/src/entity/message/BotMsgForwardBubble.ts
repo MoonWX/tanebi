@@ -61,3 +61,4 @@ export type ForwardedBubbleSegment =
     | { type: 'mention'; uin: number; name: string }
     | { type: 'mentionAll' }
     | { type: 'image'; content: BotMsgImage };
+    | { type: 'reply'; content: string };
